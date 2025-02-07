@@ -59,7 +59,7 @@ pip install -r requirements.txt
 
 ### 4. Run the Flask application
 ```markdown
-python classify-api.py
+python grit-api.py
 ```
 ### 5. Open your browser and navigate to the link below to test the endpoint.
 ``` markdown
@@ -82,12 +82,13 @@ source myenv/bin/activate
 ```
 ### 4. Install Flask and gunicorn
 ```markdown
-pip install Flask
-pip install gunicorn
+pip install fastapi
+pip install uvicorn
 ```
 ### 5. Clone the git repository
 ```markdown
-git clone https://github.com/LNCH92/Number-classification-API.git
+git clone https://github.com/LNCH92/GRITT-API
+
 ```
 ### 6. Run your API using gunicorn on port 5000
 ```markdown
