@@ -44,13 +44,13 @@ This project is a Flask-based API that classifies a given number based on variou
 
 ### 1. Clone the repository
 ```markdown
-git clone  
+git clone https://github.com/LNCH92/GRITT-API
 cd your-repository
 ```
 ### 2. Create a virtual environment and activate it:
 ```markdown
-python -m venv .venv
-source .venv\Scripts\activate
+python -m venv venv
+source venv\Scripts\activate
 ```
 ### 3. Install the required packages:
 ```markdown
@@ -63,7 +63,7 @@ python grit-api.py
 ```
 ### 5. Open your browser and navigate to the link below to test the endpoint.
 ``` markdown
-http://127.0.0.1:5000/api/classify-number?number=371
+http://127.0.0.1:8000/api/classify-number?number=371
 ```
 ## Deployment to AWS Elastic Compute Cloud (EC2)
 ### 1. SSH to a runnung instance on AWS
@@ -90,21 +90,22 @@ pip install uvicorn
 git clone https://github.com/LNCH92/GRITT-API
 
 ```
-### 6. Run your API using gunicorn on port 5000
+### 6. Run your API using Uvicorn on port 8000
 ```markdown
-gunicorn --bind 0.0.0.0:5000 classify-api:app
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
-### 7. Create an inbound rule allowing *custom TCP* on *port 5000*
+### 7. Create an inbound rule allowing *custom TCP* on *port 8000*
 Enter AWS server > Security group > inbound rule > edit rules > save rules
+
 ### 8. Open web browser and navigate to this link
 ```markdown
-http://ec2-user-public-IP-address:5000/api/classify-number?number=371
+http://ec2-user-public-IP-address:8000/api/classify-number?number=371
 ```
 Enter your AWS EC2 public-IP address where applicable.
 
 ## Dependencies
-1. Flask
-2. Flask-Marshmallow
+1. FastapI
+2. Uvicorn
 
 ## MIT License 
 
