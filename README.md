@@ -44,7 +44,7 @@ This project is a Flask-based API that classifies a given number based on variou
 
 ### 1. Clone the repository
 ```markdown
-git clone https://github.com/LNCH92/Number-classification-API.git
+git clone  
 cd your-repository
 ```
 ### 2. Create a virtual environment and activate it:
